@@ -1,6 +1,4 @@
-<h1 align="center" id="title" style="display:flex;align-items:center;justify-content:center;gap:12px;">
- 🔓 <span style="font-weight:700;">Terminal Decryption: A Birthday Wish, Disguised as a Breach</span> 🔓
-</h1>
+<h1 align="center">Terminal Decryption: A Birthday Wish, Disguised as a Breach</h1>
 
 <p align="center">
   <i>"No server, no signup, no tracking. Just a payload that only one person can open."</i>
@@ -17,76 +15,63 @@
 
 ---
 
-<div align="center">
-  <img src="https://img.shields.io/badge/⚙️_Built_with_HTML,_CSS_&_Vanilla_JS_-_Zero_Dependencies_to_Run-black?style=for-the-badge" alt="Modern Stack Badge">
-</div>
-
----
-
-## 🪄 Overview
+## Overview
 
 **Terminal Decryption** is a single-file birthday site built to feel like cracking into a secure system, not opening a greeting card.
 
 The page boots like a terminal, locks itself behind a passcode only the recipient would know, then glitches open into a warm, personal reveal — a photo and a letter, decrypted in real time. There's no backend, no form submission, no analytics. The whole experience — boot sequence, auth gate, and payload — lives in one HTML file with everything embedded, so it runs the moment it's opened.
 
-> ✨ *A birthday message, not a template. One recipient, one passcode, one payload.*
+*A birthday message, not a template. One recipient, one passcode, one payload.*
 
 ---
 
-## 🚀 Features
+## Features
 
-🖥️ **Boot sequence** — a self-typing terminal log (`[OK]`, `[WARN]`, `[LOCK]`) that sets the scene before anything is revealed.
-
-🔐 **Passcode gate** — a real auth screen with a live denial log. Wrong attempts trigger a shake and an "ACCESS DENIED" message; two wrong attempts surface a hint, never the answer.
-
-⚡ **Glitch transition** — a clip-path + hue-rotate wipe that "shatters" the terminal on correct entry, handing off to the reveal phase.
-
-🎨 **Mood shift on unlock** — the palette itself changes on decrypt, from cold terminal green to a warm tone, so the reveal *feels* different from the breach.
-
-🖼️ **Scan-line photo reveal** — the recipient's photo is embedded directly in the page (base64, no external image requests) and unveiled under an animated decrypt sweep.
-
-💌 **Personal letter** — a custom-written message rendered in a display serif, staged in choreographed fade-ins after unlock.
-
-🕯️ **Ambient embers** — a light, continuous particle drift during the reveal phase for atmosphere, without turning into a confetti cannon.
-
-🔒 **Fully offline & private** — no accounts, no network calls except the one Google Fonts request. Everything else — including the photo — ships inside the file itself.
+- **Boot sequence** — a self-typing terminal log (`[OK]`, `[WARN]`, `[LOCK]`) that sets the scene before anything is revealed.
+- **Passcode gate** — a real auth screen with a live denial log. Wrong attempts trigger a shake and an "ACCESS DENIED" message; two wrong attempts surface a hint, never the answer.
+- **Glitch transition** — a clip-path + hue-rotate wipe that "shatters" the terminal on correct entry, handing off to the reveal phase.
+- **Mood shift on unlock** — the palette itself changes on decrypt, from cold terminal green to a warm tone, so the reveal *feels* different from the breach.
+- **Scan-line photo reveal** — the recipient's photo is embedded directly in the page (base64, no external image requests) and unveiled under an animated decrypt sweep.
+- **Personal letter** — a custom-written message rendered in a display serif, staged in choreographed fade-ins after unlock.
+- **Ambient embers** — a light, continuous particle drift during the reveal phase for atmosphere, without turning into a confetti cannon.
+- **Fully offline & private** — no accounts, no network calls except the one Google Fonts request. Everything else — including the photo — ships inside the file itself.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |-----------------------------|------------------------------------------------|
-| 🧱 **HTML5** | Single-page structure, no build step |
-| 🎨 **CSS3** | All styling, animation, and phase transitions — self-contained, no frameworks |
-| 🟨 **Vanilla JavaScript** | Boot typewriter, passcode logic, glitch transition, reveal choreography, embers |
-| 🖼️ **Base64-embedded image**| The recipient's photo, inlined directly into the HTML — no image hosting needed |
-| 🔤 **Google Fonts (CDN)** | JetBrains Mono, Fraunces, Work Sans — the only external request the page makes |
+| HTML5 | Single-page structure, no build step |
+| CSS3 | All styling, animation, and phase transitions — self-contained, no frameworks |
+| Vanilla JavaScript | Boot typewriter, passcode logic, glitch transition, reveal choreography, embers |
+| Base64-embedded image | The recipient's photo, inlined directly into the HTML — no image hosting needed |
+| Google Fonts (CDN) | JetBrains Mono, Fraunces, Work Sans — the only external request the page makes |
 
 ---
 
-## 🧑‍💻 Core Functionality
+## Core Functionality
 
-### 🖥️ Phase 1 — Boot
+### Phase 1 — Boot
 - A list of boot lines is typed out character-by-character with `setTimeout`, tagged `ok` / `warn` / `dim` / `lock` for color.
 - On completion, the page auto-advances to the auth phase and focuses the passcode input.
 
-### 🔐 Phase 2 — Auth
+### Phase 2 — Auth
 - The typed passcode is normalized and compared against `CONFIG.PASSCODE`.
 - Wrong attempts increment a counter, trigger a CSS shake, and log a denial message; the second wrong attempt appends `CONFIG.HINT`.
 - A correct match disables the form and fires the glitch transition.
 
-### 💥 Transition — Glitch wipe
+### Transition — Glitch wipe
 - A fixed full-screen overlay animates through clipped, jittered slices with a brief hue-rotate, standing in for the "shatter" moment between terminal and reveal.
 
-### 💌 Phase 3 — Reveal
+### Phase 3 — Reveal
 - `document.body` gains a `warm-mode` class, swapping the background/accent palette via CSS custom properties.
 - The photo, title, caption, letter, and footer each fade up on staggered delays for a choreographed rather than instant reveal.
 - Embers spawn on an interval for the remainder of the session.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Option 1 — Just open it (fully offline)
 1. **Download** `index.html` from this repo.
@@ -94,8 +79,8 @@ The page boots like a terminal, locks itself behind a passcode only the recipien
 
 ### Option 2 — Clone the repo
 ```bash
-git clone https://github.com/D-Majumder/Terminal-Decryption-Birthday.git
-cd terminal-decryption-birthday
+git clone https://github.com/D-Majumder/Birthday_Wish.git
+cd Birthday_Wish
 open index.html   # or just double-click it in your file explorer
 ```
 
@@ -111,7 +96,7 @@ This is a static file, so any static host works: GitHub Pages, Netlify, Cloudfla
 
 ---
 
-## 🧩 Customization Tips
+## Customization Tips
 
 - **Change the recipient**: update the `<title>`, the `reveal-title` heading, and the photo `alt` text.
 - **Change the passcode & hint**: both live in the `CONFIG` object at the top of the `<script>` block — `CONFIG.PASSCODE` and `CONFIG.HINT`. Pick something only the recipient would know, and don't reuse a real password from elsewhere.
@@ -122,14 +107,15 @@ This is a static file, so any static host works: GitHub Pages, Netlify, Cloudfla
 
 ---
 
-## 📜 License
+## License
 
 This project is released under the **MIT License** — free to use, modify, and share.
-See the `LICENSE.md` file for details.
+See the `LICENSE` file for details.
 
 ---
 
-👤 Author
+## Author
+
 <p align="center">
   <a href="mailto:dhrubamajumder@proton.me" target="_blank">
     <img src="https://img.shields.io/badge/Email-Dhruba%20Majumder-blue?logo=gmail" alt="Email Badge">
@@ -141,11 +127,3 @@ See the `LICENSE.md` file for details.
     <img src="https://img.shields.io/badge/GitHub-D--Majumder-black?logo=github" alt="GitHub Badge">
   </a>
 </p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=3DFFB2&height=100&section=footer&text=One%20payload,%20one%20recipient.&fontSize=22&fontColor=ffffff&animation=fadeIn" />
-</p>
-
-<div align="center">
-<img src="https://img.shields.io/badge/🔓_Built_for_One_Person-Private_by_Design-black?style=for-the-badge" alt="Personal Use Badge">
-</div>
