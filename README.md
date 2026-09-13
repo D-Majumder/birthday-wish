@@ -79,8 +79,8 @@ The page boots like a terminal, locks itself behind a passcode only the recipien
 
 ### Option 2 — Clone the repo
 ```bash
-git clone https://github.com/D-Majumder/Birthday_Wish.git
-cd Birthday_Wish
+git clone https://github.com/D-Majumder/birthday-wish.git
+cd birthday-wish
 open index.html   # or just double-click it in your file explorer
 ```
 
